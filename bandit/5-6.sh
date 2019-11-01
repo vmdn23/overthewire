@@ -1,15 +1,17 @@
 #!/usr/bin/env bash 
 
 # password:
-# koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-
-# Guide
-# ls
-# cd inhere
-# file . -size 1033c 
-# cat ./maybehere07/.file2
-
-# answer: 
 # DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
-sshpass -p 'koReBOKuIDDepwhWk7jZC0RTdopnAYKh' ssh bandit5@bandit.labs.overthewire.org -p 2220
+# Guide
+# find / -user bandit7 -group bandit6 -size 33c  
+# It will display out a bunch of permission denied files
+# The one that doesn't have it is the one you want
+# 
+# cat /var/lib/dpkg/info/bandit7.password | grep -v denied
+# This would CAT out the file that doesn't have a denied as a result
+
+# answer: 
+# HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs 
+
+sshpass -p 'DXjZPULLxYr17uwoI01bNLQbtFemEgo7' ssh bandit6@bandit.labs.overthewire.org -p 2220
